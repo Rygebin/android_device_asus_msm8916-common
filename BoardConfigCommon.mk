@@ -1,5 +1,5 @@
-#
 # Copyright (C) 2016 The CyanogenMod Project
+#           (C) 2017 The LineageOS   Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -126,8 +126,11 @@ TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_UNIFIED_DEVICE := true
 
+ifneq ($(filter Z010D,$(TARGET_DEVICE)),)
+
 # Keymaster
-TARGET_PROVIDES_KEYMASTER := true
+TARGET_PROVIDES_KEYMASTER := true #keymaster problem on Z00ED/RD
+#endif
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
