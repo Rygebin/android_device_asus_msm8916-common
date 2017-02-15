@@ -15,5 +15,5 @@
 /dev/block/bootdevice/by-name/recovery              /recovery    emmc    defaults                                                                       recoveryonly
 
 # SDCard
-/devices/soc.0/7864900.sdhci/mmc_host*              auto         auto    defaults                                                                       voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/msm_hsusb_host/usb*               auto         auto    defaults                                                                       voldmanaged=usb:auto
+/devices/soc.0/7864900.sdhci/mmc_host*              auto         auto    defaults                                                                       voldmanaged=sdcard1:auto,noemulatedsd
+/devices/platform/msm_hsusb_host/usb1/1-1/*         /Removable/USBdisk1         vfat    nosuid,nodev                                                    wait,voldmanaged=usbdisk1:auto
